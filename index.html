@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+        <title>This is my example homepage.</title>
+    </head>
+    <body>
+        <p>
+            Here is a Bar-chart visualization comparing Square-footage of the buildings constructed across the years between 1800 to 2020.
+        </p>
+        <p>
+            We can see that the square footage of buildings built between 1950-1990 grew drastically in Illinois and then dropped down post year 2000.
+        </p>
+        <div id="myviz">
+        </div>
+    </body>
+    <script>
+        mySpec = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/hramnani/hina-ramnani.github.io/main/building_inventory.csv"
+  },
+  "mark": {"type": "bar", "clip": true},
+  "encoding": {
+    "x": {
+      "field": "Year Constructed",
+      "type": "quantitative",
+      "scale": {"domain": [1800, 2020]}
+    },
+    "y": {"field": "Square Footage", "type": "quantitative"}
+  },
+  "config": {}
+};
+        vegaEmbed('#myviz', mySpec);
+    </script>
+</html>

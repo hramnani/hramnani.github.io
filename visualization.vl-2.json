@@ -1,0 +1,16 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/hramnani/hina-ramnani.github.io/main/building_inventory.csv"
+  },
+  "mark": {"type": "bar", "clip": true},
+  "encoding": {
+    "x": {
+      "field": "Year Constructed",
+      "type": "quantitative",
+      "scale": {"domain": [1800, 2020]}
+    },
+    "y": {"field": "Square Footage", "type": "quantitative"}
+  },
+  "config": {}
+}
