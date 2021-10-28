@@ -1,0 +1,19 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Square Footage of Buildings Constructed over the Years",
+  "height": 500,
+  "width": 700,
+  "data": {
+    "url": "https://raw.githubusercontent.com/hramnani/hramnani.github.io/main/building_inventory.csv"
+  },
+  "mark": {"type": "bar", "clip": true},
+  "encoding": {
+    "x": {
+      "field": "Year Constructed",
+      "type": "quantitative",
+      "scale": {"domain": [1800, 2020]}
+    },
+    "y": {"field": "Square Footage", "type": "quantitative"}
+  },
+  "config": {}
+}
