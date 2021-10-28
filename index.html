@@ -18,6 +18,9 @@
     <script>
         mySpec = {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Square Footage of Buildings Constructed over the Years",
+  "height": 500,
+  "width": 700,
   "data": {
     "url": "https://raw.githubusercontent.com/hramnani/hramnani.github.io/main/building_inventory.csv"
   },
@@ -29,6 +32,7 @@
       "scale": {"domain": [1800, 2020]}
     },
     "y": {"field": "Square Footage", "type": "quantitative"}
+  }
   },
   "config": {}
 };
